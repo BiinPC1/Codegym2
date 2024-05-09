@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "This is a sample sentence.";
+        let wordCount = 0;
+        // Biến để kiểm tra xem ký tự trước đó có phải là khoảng trắng không
+        let isPreviousSpace = true;
+
+        for (let i = 0; i < str.length; i++) {
+            // Nếu ký tự hiện tại không phải là khoảng trắng và ký tự trước đó là khoảng trắng
+            if (str[i] !== ' ' && isPreviousSpace) {
+                wordCount++;
+                // Đặt biến isPreviousSpace thành false để chỉ ra rằng ký tự hiện tại không phải là khoảng trắng
+                isPreviousSpace = false;
+            }
+            // Nếu ký tự hiện tại là khoảng trắng
+            else if (str[i] === ' ') {
+                // Đặt biến isPreviousSpace thành true để chỉ ra rằng ký tự hiện tại là khoảng trắng
+                isPreviousSpace = true;
+            }
+        }
+        document.write("Số từ trong chuỗi là: " + wordCount);
+    </script>
+</body>
+</html>

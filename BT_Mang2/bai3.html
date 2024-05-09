@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let characters = ['a', '1', 'b', '2', 'c', '3', '4', 'd', 'e'];
+        let size = characters.length;
+        let count = 0;
+        
+        for (let i = 0; i < size; i++) {
+            if (!isNaN(parseInt(characters[i]))) {
+                count++;
+            }
+        }
+        document.write("Số ký tự số trong mảng là: " + count);
+    </script>
+</body>
+</html>
