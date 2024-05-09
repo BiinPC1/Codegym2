@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [3, 7, 11, 5, 9, 13, 17, 21, 25, 29];
+        let V = +prompt("Nhập phần tử số nguyên V: ");
+        let isInArray = false;
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === V) {
+                for (let j = i; j < array.length - 1; j++) {
+                    array[j] = array[j + 1];
+                }
+                array[array.length - 1] = 0;
+                isInArray = true;
+                break;
+            }
+        }
+        if (isInArray) {
+            document.write(V + " thuộc mảng đã cho." + "<br>");
+            document.write("Mảng sau khi xoá phần tử " + V + ": " + array);
+        } else {
+            document.write(V + " không thuộc mảng đã cho.");
+        }
+    </script>
+</body>
+</html>
